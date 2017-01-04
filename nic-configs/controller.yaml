@@ -122,6 +122,15 @@ resources:
                   name: nic2
                   # force the MAC address of the bridge to this interface
                   primary: true
+            -
+              type: ovs_bridge
+              name: br-vlan
+              members:
+                -
+                 type: interface
+                 name: nic3
+                 primary: true
+                 defroute: false 
 
 outputs:
   OS::stack_id:
